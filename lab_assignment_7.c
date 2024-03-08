@@ -5,7 +5,6 @@ typedef struct {
     int swaps;
 } Element;
 
-void printArray(Element arr[], int n);
 void selectionSort(Element arr[], int n);
 void bubbleSort(Element arr[], int n);
 
@@ -15,52 +14,23 @@ int main(void)
     Element array2[] = {{90, 0}, {80, 0}, {70, 0}, {60, 0}, {50, 0}, {40, 0}, {30, 0}, {20, 0}, {10, 0}};
     Element array3[] = {{97, 0}, {16, 0}, {45, 0}, {63, 0}, {13, 0}, {22, 0}, {7, 0}, {58, 0}, {72, 0}};
     Element array4[] = {{90, 0}, {80, 0}, {70, 0}, {60, 0}, {50, 0}, {40, 0}, {30, 0}, {20, 0}, {10, 0}};
+
     int n = 9;
 
-    printf("Unsorted array1: \n");
-    printArray(array1, n);
-
+    printf("array1 selection sort:\n");
     selectionSort(array1, n);
 
-    printf("Sorted array1 using selection sort: \n");
-    printArray(array1, n);
-
-    printf("\nUnsorted array1: \n");
-    printArray(array3, n);
-
+    printf("\narray1 bubble sort:\n");
     bubbleSort(array3, n);
 
-    printf("Sorted array1 using bubble sort: \n");
-    printArray(array3, n);
-
-    printf("\nUnsorted array2: \n");
-    printArray(array2, n);
-
+    printf("\narray2 selection sort:\n");
     selectionSort(array2, n);
 
-    printf("Sorted array2 using selection sort: \n");
-    printArray(array2, n);
-
-    printf("\nUnsorted array2: \n");
-    printArray(array4, n);
-
+    printf("\narray2 bubble sort:\n");
     bubbleSort(array4, n);
 
-    printf("Sorted array2 using bubble sort: \n");
-    printArray(array4, n);
-    
-
 }
 
-void printArray(Element arr[], int n) 
-{
-    for (int i = 0; i < n; i++) 
-    {
-        printf("%d ", arr[i].num);
-    }
-
-    printf("\n");
-}
 
 void selectionSort(Element arr[], int n) 
 {
@@ -95,7 +65,7 @@ void selectionSort(Element arr[], int n)
         arr[minIndx].swaps++;
     }
 
-    printf("total swaps: %d\n", totalSwaps);
+    printf("Total swaps: %d\n", totalSwaps);
     
     for (int i = 0; i < n; i++)
     {
@@ -125,7 +95,7 @@ void bubbleSort(Element arr[], int n)
         }
     }
 
-    printf("Total swaps for bubble sort: %d\n", totalSwaps);
+    printf("Total swaps: %d\n", totalSwaps);
 
     for (int i = 0; i < n; i++)
     {
