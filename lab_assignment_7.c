@@ -58,7 +58,7 @@ void printArray(Element arr[], int n)
     {
         printf("%d ", arr[i].num);
     }
-    
+
     printf("\n");
 }
 
@@ -107,6 +107,7 @@ void selectionSort(Element arr[], int n)
 void bubbleSort(Element arr[], int n) 
 {
     Element tmp;
+    int totalSwaps = 0;
 
     for (int i = 0; i < n - 1; i++) 
     {
@@ -119,11 +120,12 @@ void bubbleSort(Element arr[], int n)
                 arr[j + 1] = tmp;
                 arr[j].swaps++;
                 arr[j + 1].swaps++;
+                totalSwaps++;
             }
         }
     }
 
-    printf("Total swaps for bubble sort: %d\n", arr[n - 1].swaps);
+    printf("Total swaps for bubble sort: %d\n", totalSwaps);
 
     for (int i = 0; i < n; i++)
     {
